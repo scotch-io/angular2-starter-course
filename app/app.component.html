@@ -1,0 +1,47 @@
+<header>
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header"><a href="/" class="navbar-brand">
+			My Angular 2 App!
+		</a></div>
+	</nav>
+</header>
+
+<main>
+
+	<div class="row">
+	<div class="col-sm-3">
+
+		<!-- show the list of users -->
+		<ul class="list-group users-list" *ngIf="users">
+			<li class="list-group-item" 
+				*ngFor="let user of users"
+				(click)="selectUser(user)"
+				[class.active]="user === activeUser">
+					{{ user.name }}
+			</li> 
+		</ul>
+
+		<user-form (userCreated)="onUserCreated($event)"></user-form>
+
+	</div>
+	<div class="col-sm-9">
+
+		<div class="jumbotron">
+
+			<user-profile [user]="activeUser"></user-profile>
+
+			<div *ngIf="!activeUser">
+				<span class="glyphicon glyphicon-hand-left"></span>
+				<h2>Choose a User</h2>
+			</div>
+			
+		</div>
+
+	</div>
+	</div>
+
+</main>
+
+<footer>
+	i am the footer
+</footer>
