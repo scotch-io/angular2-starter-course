@@ -12,16 +12,22 @@ var core_1 = require('@angular/core');
 var user_1 = require('../shared/models/user');
 var UserFormComponent = (function () {
     function UserFormComponent() {
+        this.userCreated = new core_1.EventEmitter();
         this.newUser = new user_1.User();
         this.active = true;
     }
     UserFormComponent.prototype.onSubmit = function () {
         var _this = this;
-        console.log(this.newUser);
+        // show the event that the user was created
+        this.userCreated.emit({ user: this.newUser });
         this.newUser = new user_1.User();
         this.active = false;
         setTimeout(function () { return _this.active = true; }, 0);
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], UserFormComponent.prototype, "userCreated", void 0);
     UserFormComponent = __decorate([
         core_1.Component({
             selector: 'user-form',
