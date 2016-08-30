@@ -14,4 +14,4 @@ The environment setup is the biggest reason developers have not gotten into Angu
 
 - Setup our base project
 - Setup [TypeScript](https://www.typescriptlang.org/): To transpile ES6 code to ES5 and give us extra convenient features
-- Setup [System.js])(https://github.com/systemjs/systemjs): To load packages in our browsers
+- Setup [System.js](https://github.com/systemjs/systemjs): To load packages in our browsers
