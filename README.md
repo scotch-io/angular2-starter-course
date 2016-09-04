@@ -5,7 +5,7 @@ Angular 2 is the great new framework that will provide us a great deal of flexib
 ## Goals
 
 - Build an Angular 2 app
-- Create an Angular 2 [starter kit](https://github.com/scotch-io/angular2-starter-basic)
+- Create an Angular 2 starter kit: [GitHub](https://github.com/scotch-io/angular2-starter-basic) and [Plunker](http://plnkr.co/edit/V5tKs3?p=info)
 - Understand what goes into setting up Angular 2
 
 ## Setup
